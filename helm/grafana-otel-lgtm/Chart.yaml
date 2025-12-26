@@ -1,0 +1,7 @@
+apiVersion: v2
+name: grafana-otel-lgtm
+description: A Helm chart for Grafana OTEL LGTM stack
+type: application
+version: 0.1.0
+appVersion: "latest"
+
