@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "grafana-otel-lgtm.fullname" . }}-pv
+  labels:
+    {{- include "grafana-otel-lgtm.labels" . | nindent 4 }}
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: /data/grafana
